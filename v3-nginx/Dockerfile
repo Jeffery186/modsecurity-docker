@@ -53,7 +53,8 @@ RUN set -eux; \
     strip /usr/local/lib/libfuzzy*.so*
 
 RUN set -eux; \
-    git clone https://github.com/SpiderLabs/ModSecurity --branch v"${MODSEC_VERSION}" --depth 1; \
+#    git clone https://github.com/SpiderLabs/ModSecurity --branch v"${MODSEC_VERSION}" --depth 1; \
+    git clone https://github.com/SpiderLabs/ModSecurity; \
     cd ModSecurity; \
     ./build.sh; \
     git submodule init; \
